@@ -1,0 +1,10 @@
+PS3,150,2
+Tele,340,4
+Anillo,100,5
+Guitarra,100,2
+Collar,80,2
+Computador,280,4
+Celular,70,3
+Reloj,20,2
+Radio,9,5
+Joya,90,6

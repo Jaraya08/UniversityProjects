@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cotizaciones>
+	<cotizacion id="1" estado="pendiente">
+		<producto id="1" nombre="almejas" descripcion="hola" costo="1200" venta="1250" cantidad="4"/>
+		<producto id="shl" nombre="atun" descripcion="hola" costo="1400" venta="1450" cantidad="3"/>
+		<producto id="ve" nombre="chayote" descripcion="vegetal" costo="1200" venta="1250" cantidad="4"/>
+		<producto id="1" nombre="almejas" descripcion="hola" costo="1200" venta="1250" cantidad="4"/>
+	</cotizacion>
+	<cotizacion id="2" estado="pendiente">
+	<Producto id="AT09" nomre="Atun" descripcion="Tesoro del Mar" costo="1230" venta="1500" cantidad="2"/>
+	</cotizacion>
+<cotizacion id="2" estado="pendiente"><producto id="AT09" nomre="Atun" descripcion="Tesoro del Mar" costo="1230" venta="1500" cantidad="2"/></cotizacion></cotizaciones>

@@ -1,0 +1,11 @@
+Ej unbound,10,3,99
+Ej Normal,8,4,1
+Ej2 Normal,15,7,1
+Mochila F,46,3,99
+Ej Normal,8,4,1
+Mochila P,20,4,2
+Mochila K,12,3,2
+Mochila L,25,4,2
+Mochila J,30,2,99
+Ej Nor10,20,10,2
+Mochila,999,4,80

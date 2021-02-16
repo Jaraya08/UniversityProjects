@@ -1,0 +1,4 @@
+anillo,15000,1
+perla,10000,4
+diamante,30000,3
+collar,7500,5

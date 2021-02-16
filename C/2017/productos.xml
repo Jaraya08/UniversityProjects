@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+	<producto>
+		<Id>SL034</Id>
+		<nombre>papatas</nombre>
+		<descripcion>Salsa costaricense</descripcion>
+		<familia>Vegetales</familia>
+		<precioCosto>1256</precioCosto>
+		<precioVenta>1456</precioVenta>
+		<stock>113</stock>
+	</producto>
+	<producto>
+		<Id>Nh09</Id>
+		<nombre>almejas</nombre>
+		<descripcion>Granos</descripcion>
+		<familia>Mariscos</familia>
+		<precioCosto>1256</precioCosto>
+		<precioVenta>1460</precioVenta>
+		<stock>133</stock>
+	</producto>
+	
+	<producto>
+		<Id>CH87</Id>
+		<nombre>Chayote</nombre>
+		<descripcion>Vegetales</descripcion>
+		<familia>Vegetales</familia>
+		<precioCosto>1200</precioCosto>
+		<precioVenta>1349</precioVenta>
+		<stock>82</stock>
+	</producto>
+<producto><Id>Pi09</Id><nombre>pajaroslocos</nombre><descripcion>mas pajaros nacos</descripcion><familia>Aves</familia><precioCosto>1200</precioCosto><precioVenta>1340
+</precioVenta><stock>23
+</stock></producto><producto><Id>AT77</Id><nombre>Atun</nombre><descripcion>Tesoro del Mar</descripcion><familia>Enlatados</familia><precioCosto>1345</precioCosto><precioVenta>1500
+</precioVenta><stock>34
+</stock></producto><producto><Id>FR09</Id><nombre>Fruta</nombre><descripcion>pinha</descripcion><familia>Perecederos</familia><precioCosto>1200</precioCosto><precioVenta>1500
+</precioVenta><stock>24
+</stock></producto></productos>

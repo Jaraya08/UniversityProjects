@@ -1,0 +1,5 @@
+Praga,2023
+NY,8504
+SJ,3100
+Paris,2125
+Atenas,6617

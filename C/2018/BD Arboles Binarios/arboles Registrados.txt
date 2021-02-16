@@ -1,0 +1,6 @@
+Ejemplo 2 ,9
+Arbol2,4
+Quiz 7,5
+Arbol1,5
+Arbol Series,5
+arbol6,4

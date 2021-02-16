@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Familias>
+	<Familia>
+		<ID>MS09</ID>
+		<Descripcion>Mariscos</Descripcion>
+		</Familia><Familia><ID>V09</ID>
+		<Descripcion>Vegetales</Descripcion>
+	</Familia>
+	<Familia>
+		<ID>D09</ID>
+		<Descripcion>Desidratados</Descripcion>
+		</Familia><Familia>
+		<ID>V87</ID>
+		<Descripcion>Viceras</Descripcion>
+		</Familia>
+		<Familia><ID>NU98</ID><Descripcion>Nueces</Descripcion></Familia><Familia><ID>AV87</ID><Descripcion>Aves</Descripcion></Familia><Familia><ID>El98</ID><Descripcion>Enlatados</Descripcion></Familia><Familia><ID>P09</ID><Descripcion>Perecederos</Descripcion></Familia></Familias>

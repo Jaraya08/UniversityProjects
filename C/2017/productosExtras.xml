@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+	<producto>
+		<Id>CH87</Id>
+		<stock>10</stock>
+	</producto>
+	<producto>
+		<Id>SL034</Id>
+		<stock>10</stock>
+	</producto>
+	<producto>
+		<Id>Nh09</Id>
+		<stock>10</stock>
+	</producto>
+	<producto>
+		<Id>V54</Id>
+		<stock>10</stock>
+	</producto>
+</productos>

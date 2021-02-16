@@ -1,0 +1,6 @@
+lakers vs celtics,Lakers,celtics,7,2-3-2,57,49
+Lakers vs Celtics,Lakers,Celtic,7,3-4,48,52
+Celtics vd Porland,Celtics,Porland,99,50-49,52,46
+Chicaago Bulls vs Cleveland,Chicago Bull,Cleveland,7,2-3-2,45,43
+Philadelphia vs Toronto,Philadelphia,Toronto,8,4-4,34,56
+Saprissa vs LDA,Saprissa,LDA,7,2-3-2,57,49

@@ -1,0 +1,4 @@
+Grua,4500,400
+Camion,1500,150
+Tractor,3500,175
+Contenedor,2300,250

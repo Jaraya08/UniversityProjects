@@ -1,0 +1,3 @@
+clavos,500,3
+martillo,1200,6
+mazo,340,12

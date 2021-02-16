@@ -1,0 +1,36 @@
+Desarrollador: Jordan Araya Leiva
+
+Proyecto orientado a la resolución de problemas utilizado programación dinámica
+
+
+Detalles del proyecto.
+
+Ambiente: Linux
+Lenguaje: c
+Interfaz: GTK
+
+Infomacion adicional. 
+El programa cuenta con 6 módulos independiente que resuelven 6 problemas utilizando la programación dinámica 
+
+Problemas resueltos:
+
+1-Rutas Óptimas (Algoritmo de Floyd)
+2-Problema de la Mochila
+3-Reemplazo de Equipos
+4-Árboles Binarios de Búsqueda Óptimos
+5-Series Deportivas
+6-Multiplicación de Matrices
+
+Librerias utilizadas.
+
+Nombre       Comando de instalación
+
+<gtk/gtk.h>  sudo apt-get install libgtk-3-dev
+
+Compilacion y Ejecuacion.
+
+gcc main.c -o main `pkg-config --cflags --libs gtk+-3.0`
+./main
+
+Ó 
+make all

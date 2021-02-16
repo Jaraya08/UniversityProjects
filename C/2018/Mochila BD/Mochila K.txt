@@ -1,0 +1,3 @@
+Jabon,340,4
+Shampoo,540,6
+Cepillo,560,8

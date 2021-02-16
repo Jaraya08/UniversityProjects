@@ -1,0 +1,5 @@
+Accion,348
+Romance,429
+Drama,230
+Animadas,689
+Horror,120

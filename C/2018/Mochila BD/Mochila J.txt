@@ -1,0 +1,2 @@
+lapicero,300,4
+borrador,120,2

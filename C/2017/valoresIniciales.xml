@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iniciales>
+    <Nombre>Supermercado SAM</Nombre>
+    <Telefono>86223950</Telefono>
+    <Cedula>77238356238</Cedula>
+    <Horario>Lunes a viernes de 10am a 8pm</Horario>
+    <SiguienteFac>2</SiguienteFac>
+	<Usuario>1</Usuario>
+	<Password>1</Password>
+</iniciales>
