@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT FcNumero,FcCedulaCliente,IfNombreCompleto,VeMatricula,VeMarca,
+	VeModelo,FcFecha,SubTotalColones,SubTotalDolares,TotalColones,TotalDolares 
+FROM Facturacion 
+GROUP BY FcNumero]]>
+	</queryString>
+	<field name="FcNumero" class="java.lang.Integer"/>
+	<field name="FcCedulaCliente" class="java.lang.String"/>
+	<field name="IfNombreCompleto" class="java.lang.String"/>
+	<field name="VeMatricula" class="java.lang.String"/>
+	<field name="VeMarca" class="java.lang.String"/>
+	<field name="VeModelo" class="java.lang.String"/>
+	<field name="FcFecha" class="java.sql.Timestamp"/>
+	<field name="SubTotalColones" class="java.math.BigDecimal"/>
+	<field name="SubTotalDolares" class="java.math.BigDecimal"/>
+	<field name="TotalColones" class="java.math.BigDecimal"/>
+	<field name="TotalDolares" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="62" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="18" width="802" height="34" backcolor="#66FF66"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="18" width="802" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE DATOS GENERALES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="41" width="802" height="20" backcolor="#66FFFF"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="41" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[No. Factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="41" width="60" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Cedula Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="41" width="132" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Nombre Completo Dueño]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="41" width="51" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Matricula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="41" width="64" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Marca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="41" width="66" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Modelo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="501" y="41" width="64" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[SubTotal CRC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="41" width="76" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Fecha Entrega]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="565" y="41" width="75" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[SubTotal USD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="640" y="41" width="75" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Total CRC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="715" y="41" width="87" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Total USD]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{FcNumero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="52" y="0" width="60" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{FcCedulaCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="0" width="132" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{IfNombreCompleto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="0" width="51" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{VeMatricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="0" width="64" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{VeMarca}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="0" width="66" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{VeModelo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="425" y="0" width="76" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{FcFecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="501" y="0" width="64" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{SubTotalColones}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="565" y="0" width="75" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{SubTotalDolares}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="640" y="0" width="75" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{TotalColones}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="715" y="0" width="87" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{TotalDolares}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

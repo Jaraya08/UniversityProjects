@@ -1,0 +1,16 @@
+RANKING UNIVERSIDADES,Nombre,Segmento,Localizacion,Rating,Variacion
+6,Oxford,Literatura,Europa,4.7,0.61
+10,ETH Zurich,Ciencia,Europa,4.61,0.68
+4,Caltech,Tecnologia,America del Norte,4.78,0.14
+10,NTU Singapure,Ciencia,Asia,4.61,0.01
+13,Tsinghua University,Literatura,Asia,4.51,0.73
+5,Cambridge,Literatura,Europa,4.75,~0.14
+3,Harvard,Ciencias Sociales,America del Norte,4.89,~0.04
+7,UCL,Ingenieria,Europa,4.4,0.24
+11,Luasanne (EPFL),Ciencia,Europa,4.55,0.02
+1,MIT,Tecnologia,America del Norte,5,~0.27
+8,Imperial College London,Ciencia,Europa,4.65,0.33
+2,Stanford,Ingenieria,America del Norte,4.98,~1.86
+9,University of Chicago,Artes y Humanidades,America del Norte,4.63,0.54
+14,Tecnologico de Costa Rica,Tecnologia,America Central,4.5,0.33
+12,Princeton,Ciencias Sociales,America del Norte,4.53,0.39 

@@ -1,0 +1,4 @@
+['Purple', 'Yellow', 'Cyan', 'Green', 'Blue', 'Red']
+['Green', 'Red', 'Yellow']
+['Red', 'Blue']
+['Red', 'Blue', 'Yellow', 'Green']

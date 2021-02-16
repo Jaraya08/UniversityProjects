@@ -1,0 +1,4 @@
+['JOrdan', ['Jugador', 'Máquina'], 2]
+['lalala', ['Jugador', 'Jugador', 'Máquina'], 3]
+['Prueba Lala', ['Jugador', 'Máquina', 'Máquina'], 3]
+['ikkkk', ['Jugador', 'Máquina'], 2]
