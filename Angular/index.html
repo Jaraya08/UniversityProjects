@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="WebSiteFG" ng-controller="mainCtrl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Tramites & Logistics FG</title>
+
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Incluir AngularJS -->
+    <script src="js/lib/angular.min.js"></script>        
+    <script src="js/lib/angular-route.min.js"></script>
+    <script src="js/lib/ui-utils.min.js"></script>
+    <script src="js/lib/jcs-auto-validate.js"></script>
+    <script src="js/lib/angular-resource.min.js"></script>
+    
+
+    <!-- Incluir bootstrapJS -->
+    <script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+
+    <script src="controller/app.js"></script>
+    <script src="controller/config.js"></script>
+    
+    <!-- Controladores de páginas -->
+    <script src="controller/homeCtrl.js"></script>
+    <script src="controller/reportesCtrl.js"></script>
+    <script src="controller/clientesCtrl.js"></script>
+    <script src="controller/clienteCtrl.js"></script>
+    <script src="controller/tarifasCtrl.js"></script>
+    <script src="controller/tramitesCtrl.js"></script>
+    <script src="controller/tramiteCtrl.js"></script>
+    <script src="controller/serviciosCtrl.js"></script>
+    <script src="controller/servicioCtrl.js"></script>
+       
+</head>    
+    <body style="background: #FAF8F8;">
+        
+        <div ng-include="menuSuperior"></div>
+    
+        <div class="container">
+
+        <!-- La pagina principal ira aquí -->            
+
+            <div ng-view></div>
+
+        </div>
+    </body>
+</html>
+
+

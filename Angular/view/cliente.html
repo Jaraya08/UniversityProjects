@@ -1,0 +1,123 @@
+<!-- <br>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4><i class="fa fa-user"></i> {{cliente.Nombre | uppercase}}</h4>
+	</div> -->
+<div class="panel-body" style="background: #FFFFFF;font-family:sans-serif;">
+	<div class="col-sm-4">
+		<h3 class="text-left">Información de cliente</h3>
+			<hr>
+			<form ng-submit="guardarCliente()" novalidate="novalidate">
+				<p class="text-success animated fadeIn fast" class="col-sm-2" ng-show="mensajeflag">{{mensaje}}
+				</p>				
+				<div ng-show="creando">
+					<h4>Código cliente:</h4>
+				</div>
+				<div class="form-group" ng-show="creando">					
+					<input ng-pattern="/^[A-Za-z0-9]+$/" maxlength="" minlength="" class="form-control"
+						ng-model="cliente.Codigo" placeholder="Código único de cliente">
+				</div>
+				<div ng-show="actualizado">
+					<h4>Código cliente:</h4>
+				</div>
+				<div class="form-group" ng-show="actualizado">
+					<input type="text" class="form-control" ng-model="cliente.Codigo" required="required"
+						readonly="readonly">
+				</div>
+				<div>
+					<h4>Tipo Cliente:</h4>
+				</div>
+				<div class="form-group">
+					<select class="form-control" ng-model="cliente.TipoCliente" required="required">
+						<option value="Físico">Físico</option>
+						<option value="Jurídico">Jurídico</option>
+					</select>
+				</div>
+				<div>
+					<h4>Procedencia:</h4>
+				</div>
+				<div class="form-group">
+					<select class="form-control" ng-model="cliente.Procedencia" required="required"
+						ng-options="pais.id as pais.nombre for pais in paises">
+						<option value="">Seleccione</option>
+					</select>
+				</div>
+				<div>
+					<h4>Identificación:</h4>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" ng-model="cliente.Identificacion" required="required"
+						placeholder="Identificador del cliente">
+				</div>
+				<div>
+					<h4>Nombre:</h4>
+				</div>
+				<div class="form-group">
+
+					<input type="text" class="form-control" ng-model="cliente.Nombre" required="required"
+						placeholder="Nombre del cliente">
+				</div>
+				<div>
+					<h4>Teléfonos:</h4>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" ng-model="cliente.Telefono" ui-mask="{{telefonoMask}}"
+						required="required">
+				</div>
+				<div>
+					<h4>Correo electrónico:</h4>
+				</div>
+				<div class="form-group">
+					<input type="email" class="form-control" ng-model="cliente.Correo" required="required">
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-success animated fadeIn fast" ng-show="mensajeflag">{{mensaje}}</p>
+					</div>
+					<div class="col-sm-4">
+						<button style="background:#414141;" type="button" class="btn btn-primary btn-block"
+							ng-click="volver()">
+							<i class="fas fa-arrow-left fa-lg"></i>
+							Volver </button>
+					</div>
+					<div class="col-sm-8">
+						<button style="background:#414141; " type="submit" class="btn btn-primary btn-block"><i
+								class="fa fa-save fa-lg "></i> Guardar
+							Cambios</button>
+					</div>
+
+				</div>
+			</form>
+			<hr>
+	</div>
+
+	<div class="col-sm-8" ng-show="actualizado">
+		<h3 class="text-left">Tarifas personalizadas</h3>
+		<hr>
+		<div class="col-sm-2">
+			<a style="background: #414141" href="#tarifas/{{cliente.Codigo}}/nuevo" class="btn btn-primary"><i
+					class="fas fa-hand-holding-usd"></i> Nueva tarifa </a>
+		</div>
+		<br>
+		<br>
+		<div class="col-sm-12">
+			<table class="table table-bordered table-striped">
+				<tr>
+					<th>SERVICIO</th>
+					<th>MONTO</th>					
+					<th class="text-center">ELIMINAR</th>
+				</tr>
+				<tr ng-repeat="servicio in listaServicios">
+					<td style="display:none;">{{servicio.IdServicio}}</td>
+					<td>{{servicio.NombreServicio}}</td>
+					<td>{{servicio.Monto | currency:'₡'}}</td>					
+					<td class="text-center"><a href="#/tarifas/{{cliente.Codigo}}/{{servicio.IdServicio}}"><i
+								class="fas fa-trash-alt fa-lg " style="color:#414141"></i></a></td>
+				</tr>
+			</table>
+		</div>
+
+	</div>
+</div>
+
+</div>

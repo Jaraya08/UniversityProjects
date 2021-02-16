@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Despacha.Datos">
+    <ContentPage.Content>
+        
+        <StackLayout 
+            Margin="10">
+            <StackLayout
+                Orientation="Vertical"
+                Margin="10">
+                <Label x:Name="lblCargaDatos" 
+                       Text="Cargar datos"
+                       FontSize="20"
+                       HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout
+                Orientation="Horizontal">
+                    <Entry x:Name="txbNombreArchivo"
+                        Placeholder="Nombre del archivo"
+                        HorizontalOptions="FillAndExpand"
+                        IsEnabled="false"/>
+                    
+                    <Button x:Name="btnBuscarArchivo" 
+                            Text=". . ."
+                            HorizontalOptions="End"
+                            FontSize="20"
+                            Clicked="btnBuscarArchivo_Clicked"/>
+                </StackLayout>
+                <Button x:Name="btnCargar" 
+                        Text="Cargar datos" 
+                        ImageSource="ic_action_cloud_upload.png" 
+                        BackgroundColor="#3498DB" 
+                        Clicked="btnCargar_Clicked"/>
+            </StackLayout>
+
+            <StackLayout
+                Orientation="Vertical"
+                Margin="10">
+                <Label x:Name="lblEnviarDatos" 
+                       Text="Enviar datos"
+                       FontSize="20"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Entry x:Name="txbEmail"
+                        Placeholder="Digite un email"
+                        HorizontalOptions="FillAndExpand"
+                        />
+                <Button x:Name="brnEnvioDatos" Text="Enviar datos" ImageSource="ic_action_mail_outline.png" BackgroundColor="#3498DB" Clicked="brnEnvioDatos_Clicked"/>
+
+            </StackLayout>
+            <Label x:Name="lblNombre"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

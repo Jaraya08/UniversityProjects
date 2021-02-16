@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Facturas>
+  <Factura>
+    <ID>0</ID>
+    <Fecha>4/9/2016</Fecha>
+    <Hora>12:16:3</Hora>
+    <Placa>JHL808</Placa>
+    <Marca>Nissan</Marca>
+    <Tipo>Sedan</Tipo>
+    <Horas>3</Horas>
+    <Monto>7500</Monto>
+  </Factura>
+  <Factura>
+    <ID>1</ID>
+    <Fecha>4/9/2016</Fecha>
+    <Hora>18:12:21</Hora>
+    <Placa>124365</Placa>
+    <Marca>Toyota</Marca>
+    <Tipo>pick up</Tipo>
+    <Horas>4</Horas>
+    <Monto>12000</Monto>
+  </Factura>
+</Facturas>

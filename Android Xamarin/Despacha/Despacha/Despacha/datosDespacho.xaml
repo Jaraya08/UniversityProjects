@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Despacha.datosDespacho">
+    
+    <ContentPage.Content>
+        
+        <ScrollView>
+            
+            <StackLayout 
+                
+                Margin="20">
+                <Label 
+                    Text="Datos de Salida" 
+                    FontAttributes="Bold" 
+                    FontSize="25"/>
+                <Entry x:Name="txbContenedor"
+                    FontAttributes="Bold"  
+                    IsEnabled="False" 
+                    FontSize="43"/>
+                <Entry x:Name="txbFecha" 
+                       FontAttributes="Bold"  
+                       IsEnabled="False" 
+                       FontSize="35"/>
+                <Entry x:Name="txbPlaca" 
+                       Placeholder="Placa" 
+                       FontSize="35" 
+                       TextChanged="txbPlaca_TextChanged"/>
+                <Label x:Name="lblPlacaIsvalid" 
+                       Text="Placa requerida" 
+                       TextColor="Red" 
+                       IsVisible="true"  
+                       FontSize="15"/>
+                <Entry x:Name="txbMarchamo" 
+                       Placeholder="Marchamo" 
+                       FontSize="35" 
+                       TextChanged="txbMarchamo_TextChanged"/>
+                <Label x:Name="lblMarchamoIsvalid" 
+                       Text="Marchamo requerido" 
+                       TextColor="Red" 
+                       IsVisible="true"  
+                       FontSize="15" />
+                <Button x:Name="btnCancelar" 
+                        Text="Cancelar" 
+                        ImageSource="ic_action_cancel.png"
+                        BackgroundColor="#5E666A" 
+                        Clicked="btnCancelar_Clicked"/>
+                <Button x:Name="btnDespachar" 
+                        Text="Despachar"                         
+                        ImageSource="ic_action_flight_takeoff.png" 
+                        BackgroundColor="#3498DB" 
+                        Clicked="btnDespachar_Clicked"/>
+           
+            </StackLayout>
+            
+            </ScrollView>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

@@ -1,0 +1,115 @@
+<div class="panel panel-default">
+	<div class="panel-body" style="background: #FFFFFF;font-family:sans-serif;">
+
+		<!-- INFORMACION DE TRAMITE -->
+		<div class="col-sm-4">
+			<h3 class="text-left"></i>Información de tramite</h3>
+			<hr>
+			<form ng-submit="guardarTramite()" novalidate="novalidate">
+				<div ng-show="actualizado">
+					<h4>Identificador:</h4>
+				</div>
+				<div class="form-group" ng-show="actualizado">
+					<input type="text" class="form-control" ng-model="tramites.Identificador" readonly="readonly">
+				</div>
+				<div>
+					<h4>Nombre cliente:</h4>
+				</div>
+				<div class="form-group">
+					<select ID="SLC_CLIENTE" ng-disabled="actualizado" class="form-control"
+						ng-model="tramites.CodigoCliente" required="required"
+						ng-options="cliente.Codigo as cliente.Nombre for cliente in clientes | orderBy:'Nombre'">
+						<option value="{{cliente.Codigo}}">{{cliente.Nombre}}</option>
+					</select>
+				</div>
+				<div>
+					<h4>DUAS / Viajes:</h4>
+				</div>
+				<div class="form-group">
+					<textarea maxlength="1024" style="resize: none;" type="text" rows="2" class="form-control"
+						ng-model="tramites.DuasViajes" required="required" placeholder="Números de DUAS o viajes">
+					</textarea>
+				</div>
+				<div>
+					<h4>Referencias:</h4>
+				</div>
+				<div class="form-group">
+
+					<textarea maxlength="1024" style="resize: none;" type="text" rows="2" class="form-control"
+						ng-model="tramites.Referencias" required="required"
+						placeholder="Referéncias del tramite (recibos,contenedores,identificadores,manifiestos,etc)">
+					</textarea>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-success animated fadeIn fast" ng-show="mensajeflag">{{mensaje}}</p>
+					</div>
+					<div class="col-sm-4">
+						<button style="background:#414141;" type="button" class="btn btn-primary btn-block"
+							ng-click="volver()">
+							<i class="fas fa-arrow-left fa-lg"></i>
+							Volver </button>
+					</div>
+					<div class="col-sm-8">
+						<button style="background:#414141; " type="submit" class="btn btn-primary btn-block"><i
+								class="fa fa-save fa-lg "></i> Guardar
+							Cambios</button>
+					</div>
+					<br>
+
+				</div>
+			</form>
+		</div>
+
+		<!-- SERVICIOS POR TRAMITE -->
+		<div class="col-sm-8" ng-show="actualizado">
+			<h3 class="text-left">Servicios por tramite</h3>
+			<hr>
+			<div class="container">
+				<h4>Agregrar servicios al tramite #:{{ tramites.Identificador }}</h4>
+			</div>
+			<div class="col-sm-12">
+					<p class="text-success animated fadeIn fast" ng-show="mensajeflagServicio">{{mensajeServicio}}</p>
+				</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="col-sm-10">
+						<select ID="SLC_SERVICIOSCLIENTE" class="form-control" ng-model="tramites.IdServicio"
+							required="required"
+							ng-options="servicios.idServicio as servicios.NombreServicio for servicios in serviciosFG | orderBy:'NombreServicio'">
+							<option value="{{servicio.idServicio}}">{{servicio.NombreServicio}}</option>
+						</select>
+					</div>
+					<div class="col-sm-2">
+						<button style="background: #414141;" type="button" class="btn btn-primary btn-block"
+							ng-click="setServicioTramite(tramites.CodigoCliente,tramites.Identificador,tramites.IdServicio)">
+							<i class="fas fa-plus fa-lg"></i></button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="col-sm-12">
+				<table ID="TB_SERVICIOSTRAMITE" class="table table-bordered table-striped">
+					<tr>
+						<th ng-hide="true">Idservicio</th>
+						<th>Servicio</th>
+						<th>Cantidad</th>
+						<th>Monto</th>
+						<th class="text-center">Eliminar</th>
+					</tr>
+					<tr ng-repeat="servicioTramite in serviciosTramite">
+						<td ng-hide="true">{{servicioTramite.idServicio}}</td>
+						<td>{{servicioTramite.NombreServicio}}</td>
+						<td>{{servicioTramite.Cantidad}}</td>
+						<td>{{servicioTramite.Monto | currency:'₡'}}</td>
+						<td class="text-center"><a href="#/tarifas/{{cliente.Codigo}}/{{servicio.IdServicio}}"><i
+									class="fas fa-trash-alt" style="color:#414141"></i></a></td>
+					</tr>
+				</table>
+				<hr>
+			</div>
+
+		</div>
+
+	</div>
+</div>

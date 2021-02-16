@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>    
+	<meta charset="UTF-8">
+    <meta name="description" content="Sitio de venta de autos">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">    
+	<title>CR AUTOS</title>
+    <link rel="stylesheet" href="style2.css">    
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+ </head>
+	<body>	
+		
+		<!--<header>
+			Encabezado-
+		</header>-->
+		<!--<aside>
+		  	<button type="button">Prueba</button>
+			<h2 id="resultado">0</h2>
+			<br>			
+			<h2 id="equipo">Equipo</h2>
+		</aside>-->
+		
+		<nav class="navbar">
+			<ul>					
+				<li><a href = "" target="_self"><i class="fa fa-user-o fa-2x" aria-hidden="true"></i> Login </a>
+					<ul>
+						<li><a href = "usuario.html" target="_self">Ver Perfil</a></li>												
+						<li><a href = "#.html" target="_self">Cerrar Sesión</a></li>				
+					</ul>
+				<li><a href = "contactenos.html" target="_self"> <i class="fa fa-mobile fa-2x" aria-hidden="true"></i> Contáctenos </a></li>
+				<li><a href = "#"> <i class="fa fa-wrench fa-2x" aria-hidden="true"></i> Accesorios </a>
+					<ul>
+						<li><a href = "promoAcces.html" target="_self">Promocionar Accesorios</a></li>						
+						<li><a href = "compraAcces.html" target="_self">Comprar Accesorios</a></li>				
+					</ul>
+				</li>
+				<li><a href = "#"> <i class="fa fa-car fa-2x" aria-hidden="true"></i> Vehículos</a>
+					<ul>
+						<li><a href = "venderVeh.html" target="_self"> Vender Vehículo </a></li>						
+						<li><a href = "comprarVeh.html" target="_self">Comprar Vehículo</a></li>				
+					</ul>
+				</li>					
+				<li><a href = "home.html" target="_self"> <i class="fa fa-home fa-2x" aria-hidden="true"></i> Inicio </a></li>
+			</ul>
+		</nav>
+		<content>
+			<div class="acordeon">				
+				<div class="acordeon__item">
+					<input type="checkbox" name="acordeon" id="item1">
+					<label for="item1" class="acordeon__titulo">
+						<i class="fa fa-car fa-2x" aria-hidden="true"></i>
+						Datos generales del vehículo
+					</label>
+					<div class="acordeon__contenido">						
+					<table = "tabla" width=100% height=10px>
+						<tr>
+							<td >Año:</td>
+							<td ><input type="number" style="height:50" width=30% size="40" maxlength="40" name="Año" value="2018"  min="1950" max="2018"></td>
+							<td>Marca:</td>
+							<td><input type="text" style="height:50" width=30%size="20" maxlength="20" > </td>
+							<td >Modelo:</td>													
+							<td ><input type="text"  width=30% size="20" maxlength="20"></td>																								
+						</tr>
+						<tr>
+							<td >Tipo:</td>
+							<td ><select width=20%>
+									<option>Casa Rodante</option>
+									<option>Comercial a 4 ton</option>
+									<option>Comercial a 6 ton</option>
+									<option>Comercial a 8 ton</option>
+									<option>Comercial a 10 ton</option>
+									<option>Hatchback</option>
+									<option>Minivan/Microbus</option>
+									<option>Pickup 4x2</option>
+									<option>Pickup 4x4</option>
+									<option>Sedan</option>
+									<option>Station Wagon</option>
+									<option> SUV 4x2</option>
+									<option> SUV 4x4</option>
+								</select>
+							</td>
+							<td>Kilometraje:</td>
+							<td><input type="number" width=20% name="Kilometros" ></td>
+							<td>Cilinbraje:</td>
+							<td><input type="number" width=20%> </td>
+																	
+						</tr>
+						<tr>
+							<td>No. de Placa:</td>
+							<td><input type="text" width =10% name="Placa"></td>
+							<td>No. de Puertas:</td>
+							<td><input type="number" name="Puertas"> </td>
+							<td>Provincia:</td>							
+							<td><select width =25%>
+									<option>Limón</option>
+									<option>San José</option>
+									<option>Heredia</option>
+									<option>Cartago</option>
+									<option>Puntarenas</option>									
+									<option>Guanacaste</option>									
+									<option>Alajuela</option>									
+								</select>
+							</td>												
+						</tr>
+						<tr>
+							<td>Color externo:</td>
+							<td><input type="text" width =25% name="ColorExterno"></td>
+							<td>Color interno:</td>
+							<td><input type="text" width =25% name="ColorInterno"></td>
+							<td>Combustible:</td>
+							<td><select width =10%>
+									<option>Gasolina</option>
+									<option>Diesel</option>
+									<option>Eléctrico</option>
+									<option>Híbrido</option>
+									<option>Gas</option>									
+								</select>
+							</td>																									
+						</tr>
+						<tr>							
+							<td>Precio:</td> 
+							<td><input type="number" width=10%> <br>
+								<div id="groupMoneda" border=0>
+									<input type="radio" name="groupMoneda" value="USD"> UDS
+									<input type="radio" name="groupMoneda" value="CRC"> CRC
+								</div>
+							</td>														
+							<td>¿Negociable? </td>
+							<td>
+								<div id="groupNegociable" border=0>
+									<input type="radio" name="groupNegociable" value="SI"> Si
+									<input type="radio" name="groupNegociable" value="NO"> No
+								</div>									
+							</td>							
+							<td>Tracción</td>
+							<td>
+							<div id="groupTraccion" border=0>
+								<input type="radio" name="groupTraccion" value="Manual"> Manual
+								<input type="radio" name="groupTraccion" value="Auto"> Automatica
+							</div>
+							</td>																	
+						</tr>
+						</table>
+					</div>										
+				</div>
+				<div class="acordeon__item">
+					<input type="checkbox" name="acordeon" id="item2">
+					<label for="item2" class="acordeon__titulo">
+					<i class="fa fa-plus-square fa-2x" aria-hidden="true"></i> Equipamiento del Vehículo (Extras)</label>											
+					<div class="acordeon__contenido">
+						<table width=100%>
+							<tr>
+								<td><input type="checkbox" width=25% > AC climatizado</td>
+								<td><input type="checkbox" width=25%> AC doble zona </td>
+								<td><input type="checkbox" width=25%> AC normal </td>
+								<td><input type="checkbox" width=25%> Alarma </td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Aros de lujo</td>
+								<td><input type="checkbox" width=25%> Asientos Eléctricos</td>
+								<td><input type="checkbox" width=25%> Bluetooth </td>
+								<td><input type="checkbox" width=25%> Bolsas de aire </td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Caja de cambios dual</td>
+								<td><input type="checkbox" width=25%> Asientos Eléctricos</td>
+								<td><input type="checkbox" width=25%> Cámara trasera </td>
+								<td><input type="checkbox" width=25%> Cierre central</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Climatizado</td>
+								<td><input type="checkbox" width=25%> Control de descenso</td>
+								<td><input type="checkbox" width=25%> Control de estabilidad</td>
+								<td><input type="checkbox" width=25%> Control de radio</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Cruice control</td>
+								<td><input type="checkbox" width=25%> Desempañador trasero</td>
+								<td><input type="checkbox" width=25%> Dirección hidráulica</td>
+								<td><input type="checkbox" width=25%> Disco compacto</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Doble zona</td>
+								<td><input type="checkbox" width=25%>Espejo eléctrico</td>
+								<td><input type="checkbox" width=25%> Frenos ABS</td>
+								<td><input type="checkbox" width=25%> Halógenos</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> LLanta</td>
+								<td><input type="checkbox" width=25%> Llave inteligente</td>
+								<td><input type="checkbox" width=25%> Luces xenón</td>
+								<td><input type="checkbox" width=25%> Monitor de radios USB /AUX</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> RTV al dia</td>
+								<td><input type="checkbox" width=25%> Sensor de lluvia</td>
+								<td><input type="checkbox" width=25%> Sensor fontal</td>
+								<td><input type="checkbox" width=25%> Sensor trasero</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Sunroof</td>
+								<td><input type="checkbox" width=25%> Tapicería de cuero</td>
+								<td><input type="checkbox" width=25%> Turbo</td>
+								<td><input type="checkbox" width=25%> Vidrios Eléctricos</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Vidrios tintados</td>
+								<td><input type="checkbox" width=25%> Volante</td>
+								<td><input type="checkbox" width=25%> Volante ajustable</td>
+								<td><input type="checkbox" width=25%> Volante multifuncional</td>
+							</tr>
+						</table>
+							
+					</div>			
+				</div>
+				<div class="acordeon__item">
+					<input type="checkbox" name="acordeon" id="item3">
+					<label for="item3" class="acordeon__titulo">
+					<i class="fa fa-file-image-o fa-2x" aria-hidden="true"></i> Multimedias</label>
+					<div class="acordeon__contenido"> 
+						<table width=100% >
+								<tr>
+									<td >Selecionar imagen:<input  type="image" width=50% height=20px></td>
+								</tr>
+								<tr>
+									<td height=100px>Imagenes Cargadas 
+										
+									</td>
+								</tr>
+								<tr>
+									<td height= 20%> Descripcion:<input  type="text" width=100% ></td>
+								</tr>
+						</table>
+					</div>			
+				</div>
+				<div class="acordeon__item">
+					<input type="checkbox" name="acordeon" id="item4">
+					<label for="item4" class="acordeon__titulo">
+					<i class="fa fa-address-card fa-2x" aria-hidden="true"></i> Información del vendedor</label>
+					<div class="acordeon__contenido"> 
+						<table width=100% >
+								<tr>
+									<td width=20%>Nombre completo:</td>
+									<td width=80%><input type="text"></td>
+								</tr>
+									<td width=20%>No. Telefónico:</td>
+									<td width=80%><input type="text" width=50% ></td>
+								</tr>
+									<td width=20%>Correo Electronico:</td>
+									<td width=80%><input type="text" ></td>
+								</tr>
+						</table>
+					</div>			
+				</div>
+				<div class="acordeon__item">
+					<input type="checkbox" name="acordeon" id="item5">
+					<label for="item5" class="acordeon__titulo">
+					<i class="fa fa-comment-o fa-2x" aria-hidden="true"></i> Observaciones 
+						
+					</label>
+					<div class="acordeon__contenido"> 
+						<table width=100% >
+							<tr>
+								<td width=25%>Observaciones adicionales:</td>
+								<td width=75%>
+									<textarea name="text" cols="100" rows="6" size=100%></textarea>
+								</td>
+							</tr>
+						</table>
+					</div>			
+				</div>				
+			</div>
+			<button class ="botones" type="button" float="right" onclick="#funcion">
+			<i class="fa fa-floppy-o " aria-hidden="true"></i> Publicar Vehículo</button>
+		</content>
+		<footer id="pie">
+			Derechos Reservados &copy; 2018
+      </footer>
+</body>
+  
+  
+  

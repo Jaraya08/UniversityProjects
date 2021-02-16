@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+
+<head>    
+	<meta charset="UTF-8">
+    <meta name="description" content="Sitio de venta de autos">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">    
+	<title>CR AUTOS</title>
+    <link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href="tooltip.css">	
+	<link rel="stylesheet" href="modal.css">	
+	<link rel="stylesheet" href="script.js">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+ </head>
+	<body>
+		<!--Ventana Modal que muestra la informacion del venderdor-->
+		<div id="modal-user" class="modal">  
+			<form class="modal-content-user animate" >        
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('modal-user').style.display='none'" class="close" title="Close PopUp">&times;</span>					
+				</div>
+				<div class="container">
+				  <table style="text-align:center">
+				   <tr><td><i class="fa fa-address-card fa-4x" aria-hidden="true"></i></td></tr>				 
+				   <tr><td style="font-weight: bold">Nombre</td></tr>
+					<tr><td>Jordan Araya Leiva</td></tr>
+					<tr><td style="font-weight: bold">Teléfono</td></tr>
+					<tr><td>86223950</td></tr>
+					<tr><td style="font-weight: bold">Correo Electronico</td></tr>
+					<tr><td>jordan.kn08@gmail.com</td></tr>
+				  </table>				  
+				</div>
+			</form>  
+		</div>
+
+		<!--Ventana Modal que muestra la informacion del Vehiculo-->
+		<div id="modal-vehiculo" class="modal">  
+			<form class="modal-content-veh animate" >
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('modal-vehiculo').style.display='none'" class="close" title="Close PopUp">&times;</span>					
+				</div>
+				<div class="container">
+					
+					<div class="acordeon">				
+						<div class="acordeon__item">
+							<input type="checkbox" name="acordeon" id="item1">
+							<label for="item1" class="acordeon__titulo">
+							<i class="fa fa-car fa-2x" aria-hidden="true"></i>
+								Datos generales del vehiculo
+							</label>
+							<div class="acordeon__contenido">						
+								<table = "tabla" width=100% height=10px>
+									<tr>
+										<td >Año:</td>
+										<td ><input type="number" style="height:50" width=30% size="40" maxlength="40" name="Año" value="2018"  min="1950" max="2018"></td>
+										<td>Marca:</td>
+										<td><input type="text" style="height:50" width=30%size="20" maxlength="20" > </td>
+										<td >Modelo:</td>													
+										<td ><input type="text"  width=30% size="20" maxlength="20"></td>																								
+									</tr>
+									<tr>
+							<td >Tipo:</td>
+							<td ><select width=20%>
+									<option>Casa Rodante</option>
+									<option>Comercial a 4 ton</option>
+									<option>Comercial a 6 ton</option>
+									<option>Comercial a 8 ton</option>
+									<option>Comercial a 10 ton</option>
+									<option>Hatchback</option>
+									<option>Minivan/Microbus</option>
+									<option>Pickup 4x2</option>
+									<option>Pickup 4x4</option>
+									<option>Sedan</option>
+									<option>Station Wagon</option>
+									<option> SUV 4x2</option>
+									<option> SUV 4x4</option>
+								</select>
+							</td>
+							<td>Kilometraje:</td>
+							<td><input type="number" width=20% name="Kilometros" ></td>
+							<td>Cilinbraje:</td>
+							<td><input type="number" width=20%> </td>
+																	
+						</tr>
+						<tr>
+							<td>No. de Placa:</td>
+							<td><input type="text" width =10% name="Placa"></td>
+							<td>No. de Puertas:</td>
+							<td><input type="number" name="Puertas"> </td>
+							<td>Provincia:</td>							
+							<td><select width =25%>
+									<option>Limón</option>
+									<option>San José</option>
+									<option>Heredia</option>
+									<option>Cartago</option>
+									<option>Puntarenas</option>									
+									<option>Guanacaste</option>									
+									<option>Alajuela</option>									
+								</select>
+							</td>												
+						</tr>
+						<tr>
+							<td>Color externo:</td>
+							<td><input type="text" width =25% name="ColorExterno"></td>
+							<td>Color interno:</td>
+							<td><input type="text" width =25% name="ColorInterno"></td>
+							<td>Combustible:</td>
+							<td><select width =10%>
+									<option>Gasolina</option>
+									<option>Diesel</option>
+									<option>Eléctrico</option>
+									<option>Híbrido</option>
+									<option>Gas</option>									
+								</select>
+							</td>																									
+						</tr>
+						<tr>							
+							<td>Precio:</td> 
+							<td><input type="number" width=10%> <br>
+								<div id="groupMoneda" border=0>
+									<input type="radio" name="groupMoneda" value="USD"> UDS
+									<input type="radio" name="groupMoneda" value="CRC"> CRC
+								</div>
+							</td>														
+							<td>¿Negociable? </td>
+							<td>
+								<div id="groupNegociable" border=0>
+									<input type="radio" name="groupNegociable" value="SI"> Si
+									<input type="radio" name="groupNegociable" value="NO"> No
+								</div>									
+							</td>							
+							<td>Tracción</td>
+							<td>
+							<div id="groupTraccion" border=0>
+								<input type="radio" name="groupTraccion" value="Manual"> Manual
+								<input type="radio" name="groupTraccion" value="Auto"> Automatica
+							</div>
+							</td>																	
+						</tr>
+						</table>
+					</div>										
+				</div>
+				<div class="acordeon__item">
+					<input type="checkbox" name="acordeon" id="item2">
+					<label for="item2" class="acordeon__titulo">
+					<i class="fa fa-plus-square fa-2x" aria-hidden="true"></i> Equipamiento del Vehiculo (Extras)</label>											
+					<div class="acordeon__contenido">
+						<table width=100%>
+							<tr>
+								<td><input type="checkbox" width=25% > AC climatizado</td>
+								<td><input type="checkbox" width=25%> AC doble zona </td>
+								<td><input type="checkbox" width=25%> AC normal </td>
+								<td><input type="checkbox" width=25%> Alarma </td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Aros de lujo</td>
+								<td><input type="checkbox" width=25%> Asientos Eléctricos</td>
+								<td><input type="checkbox" width=25%> Bluetooth </td>
+								<td><input type="checkbox" width=25%> Bolsas de aire </td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Caja de cambios dual</td>
+								<td><input type="checkbox" width=25%> Asientos Eléctricos</td>
+								<td><input type="checkbox" width=25%> Cámara trasera </td>
+								<td><input type="checkbox" width=25%> Cierre central</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Climatizado</td>
+								<td><input type="checkbox" width=25%> Control de descenso</td>
+								<td><input type="checkbox" width=25%> Control de estabilidad</td>
+								<td><input type="checkbox" width=25%> Control de radio</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Cruice control</td>
+								<td><input type="checkbox" width=25%> Desempañador trasero</td>
+								<td><input type="checkbox" width=25%> Dirección hidráulica</td>
+								<td><input type="checkbox" width=25%> Disco compacto</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Doble zona</td>
+								<td><input type="checkbox" width=25%>Espejo eléctrico</td>
+								<td><input type="checkbox" width=25%> Frenos ABS</td>
+								<td><input type="checkbox" width=25%> Halógenos</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> LLanta</td>
+								<td><input type="checkbox" width=25%> Llave inteligente</td>
+								<td><input type="checkbox" width=25%> Luces xenón</td>
+								<td><input type="checkbox" width=25%> Monitor de radios USB /AUX</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> RTV al dia</td>
+								<td><input type="checkbox" width=25%> Sensor de lluvia</td>
+								<td><input type="checkbox" width=25%> Sensor fontal</td>
+								<td><input type="checkbox" width=25%> Sensor trasero</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Sunroof</td>
+								<td><input type="checkbox" width=25%> Tapicería de cuero</td>
+								<td><input type="checkbox" width=25%> Turbo</td>
+								<td><input type="checkbox" width=25%> Vidrios Eléctricos</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" width=25%> Vidrios tintados</td>
+								<td><input type="checkbox" width=25%> Volante</td>
+								<td><input type="checkbox" width=25%> Volante ajustable</td>
+								<td><input type="checkbox" width=25%> Volante multifuncional</td>
+							</tr>
+						</table>
+							
+					</div>			
+				</div>
+				<div class="acordeon__item">
+					<input type="checkbox" name="acordeon" id="item3">
+					<label for="item3" class="acordeon__titulo">
+					<i class="fa fa-file-image-o fa-2x" aria-hidden="true"></i> Multimedias</label>
+					<div class="acordeon__contenido"> 
+						<table width=100% >								
+							<tr>
+								<td height=100px>Imagenes Cargadas 
+																		
+							</tr>								
+						</table>
+					</div>			
+				</div>				
+				<div class="acordeon__item">
+					<input type="checkbox" name="acordeon" id="item5">
+					<label for="item5" class="acordeon__titulo">
+					<i class="fa fa-comment-o fa-2x" aria-hidden="true"></i> Observaciones 
+						
+					</label>
+					<div class="acordeon__contenido"> 
+						<table width=100% >
+							<tr>
+								<td width=25%>Observaciones adicionales:</td>
+								<td width=75%>
+									<textarea name="text" cols="100" rows="6" size=100%></textarea>
+								</td>
+							</tr>
+						</table>
+					</div>			
+				</div>						
+							</div>
+						</div>
+					</div>																						
+				</div>
+			</form>  
+		</div>
+				
+		<!--<header>
+			Encabezado-
+		</header>-->
+		<aside>
+		<div class="acordeon">				
+		  	<div class="acordeon__item">
+					<input type="checkbox" name="acordeon" id="filtro1">
+					<label for="filtro1" class="acordeon__titulo">
+					<i class="fa fa-filter fa-2x" aria-hidden="true"></i>Filtros</label>
+					<div class="acordeon__contenido"> 
+						<table width=100% >							
+							<tr>
+								<td>Moneda</td>
+								<td>																
+										<div id="groupMoneda" border=0>
+											<input type="radio" name="groupMoneda" value="USD" checked=True> UDS
+											<input type="radio" name="groupMoneda" value="CRC"> CRC
+										</div>									
+								</td>								
+							</tr>	
+							<tr>	
+									<td>Monto Mínimo</td>
+									<td><input type="number" size=14% name="MontoMinimo" value="500"></td>									
+							</tr>
+							<tr>
+									<td>Monto Máximo</td>
+									<td><input type="number" size=14% name="MontoMaximo" value="100000"></td>
+							</tr>
+							<tr>
+									<td>Año Mínimo</td>
+									<td><input type="number"  value="1980" min="1950" max="2018"></td>
+							</tr>
+							<tr>
+									<td>Año Máximo</td>
+									<td><input type="number"  value="2018"  min="1950" max="2018"></td>
+							</tr>
+							<tr>
+								<td>Marca:</td>
+								<td><input type="text" style="height:50" size=14% maxlength="20" value="Cualquiera"> </td>
+							</tr>
+							<tr>
+								<td >Modelo:</td>													
+								<td ><input type="text"  size=14% maxlength="20" value="Cualquiera"></td>																								
+							</tr>							
+							<tr>
+								<td >Tipo:</td>
+								<td ><select width=20%>
+									<option>Casa Rodante</option>
+									<option>Comercial a 4 ton</option>
+									<option>Comercial a 6 ton</option>
+									<option>Comercial a 8 ton</option>
+									<option>Comercial a 10 ton</option>
+									<option>Hatchback</option>
+									<option>Minivan/Microbus</option>
+									<option>Pickup 4x2</option>
+									<option>Pickup 4x4</option>
+									<option>Sedan</option>
+									<option>Station Wagon</option>
+									<option> SUV 4x2</option>
+									<option> SUV 4x4</option>
+								</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Tracción</td>
+								<td>
+									<div id="groupTraccion" border=0>
+										<input type="radio" name="groupTraccion" value="Manual" checked=True> Manual
+										<input type="radio" name="groupTraccion" value="Auto"> Automatica
+									</div>
+								</td>			
+							</tr>
+							<tr>
+								<td>Combustible:</td>
+								<td><select width =10%>
+									<option>Gasolina</option>
+									<option>Diesel</option>
+									<option>Eléctrico</option>
+									<option>Híbrido</option>
+									<option>Gas</option>									
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>¿Extras?</td>
+								<td>
+									<div id="groupExtras" border=0>
+										<input type="radio" name="groupExtras" value="SiExtras" hecked=True > Si
+										<input type="radio" name="groupExtras" value="NoExtras"> No
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Provincia:</td>							
+								<td><select width =25%>
+									<option>Limón</option>
+									<option>San José</option>
+									<option>Heredia</option>
+									<option>Cartago</option>
+									<option>Puntarenas</option>									
+									<option>Guanacaste</option>									
+									<option>Alajuela</option>									
+									</select>
+								</td>
+							</tr>
+						</table>
+					</div>			
+				</div>
+				<div class="acordeon__item">
+					<input type="checkbox" name="acordeon" id="filtro2">
+					<label for="filtro2" class="acordeon__titulo">
+					<i class="fa fa-filter fa-2x" aria-hidden="true"></i>Otros Filtros</label>
+					<div class="acordeon__contenido"> 
+						<table width=100% >							
+							<tr>
+								<td >Kilometraje</td>													
+								<td><input type="number"  value="5000"  min="1" max="500000"> Menor a</td>
+							</tr>
+							<tr>
+								<tr>
+								<td >Cilindraje</td>													
+								<td><input type="number"  value="2500"  min="600" max="10000"> Menor a</td>
+							</tr>
+							</tr>
+							<tr>
+								<td >Color Externo</td>													
+								<td ><input type="text" size=10% maxlength="20" value="Cualquiera"></td>	
+							</tr>
+							<tr>
+								<td >Color Interno</td>													
+								<td ><input type="text" size=10% maxlength="20" value="Cualquiera"></td>	
+							</tr>
+							<tr>
+								<td >No. de Placa: </td>													
+								<td ><input type="text"  size=10% maxlength="8"></td>	
+							</tr>
+							<tr>
+								<td >No. de Puertas: </td>													
+								<td ><input type="number"  min="2" max="5" value="4"></td>	
+							</tr>							
+						</table>
+					</div>			
+				</div>
+			</div>	
+		<button class ="botones" type="button" float="right" onclick="#funcion">
+			<i class="fa fa-filter fa-1x" aria-hidden="true"></i> Filtrar Vehículos</button>
+		</aside>
+		
+		<content class="content_venta" border =1 width =100%>						
+
+		<table>
+			<tr>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-fast-backward" aria-hidden="true"></i></button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-backward fa-1x" aria-hidden="true"></i></button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">1</button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-forward" aria-hidden="true"></i></button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-fast-forward" aria-hidden="true"></i></button>
+				</td>
+			</tr>
+		</table>
+		
+		
+		<div id="groupgrid">
+						
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 14,000 UDS 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="imgVehiculos/1.jpg">
+				</div>
+				<div class="c">
+					<table>
+						<td class="tooltip">							
+								<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+								<i class="fa fa-mobile fa-1x" aria-hidden="true"></i></button>
+								<span class="tooltiptext">Ver información del vendedor</span>
+						</td>
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-vehiculo').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del vehículo</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 14,000 UDS 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="imgVehiculos/2.jpg" >
+				</div>
+				<div class="c">
+					<table>
+						<td class="tooltip">							
+								<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+								<i class="fa fa-mobile fa-1x" aria-hidden="true"></i></button>
+								<span class="tooltiptext">Ver información del vendedor</span>
+						</td>
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-vehiculo').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del vehículo</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 14,000 UDS 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="imgVehiculos/3.jpg" >
+				</div>
+				<div class="c">
+					<table>
+						<td class="tooltip">							
+								<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+								<i class="fa fa-mobile fa-1x" aria-hidden="true"></i></button>
+								<span class="tooltiptext">Ver información del vendedor</span>
+						</td>
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-vehiculo').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del vehículo</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 14,000 UDS 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="imgVehiculos/4.jpg">
+				</div>
+				<div class="c">
+					<table>
+						<td class="tooltip">							
+								<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+								<i class="fa fa-mobile fa-1x" aria-hidden="true"></i></button>
+								<span class="tooltiptext">Ver información del vendedor</span>
+						</td>
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-vehiculo').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del vehículo</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 14,000 UDS 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="imgVehiculos/5.jpg">
+				</div>
+				<div class="c">
+					<table>
+						<td class="tooltip">							
+								<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+								<i class="fa fa-mobile fa-1x" aria-hidden="true"></i></button>
+								<span class="tooltiptext">Ver información del vendedor</span>
+						</td>
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-vehiculo').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del vehículo</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 14,000 UDS 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="imgVehiculos/6.jpg" >
+				</div>
+				<div class="c">
+					<table>
+						<td class="tooltip">							
+								<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+								<i class="fa fa-mobile fa-1x" aria-hidden="true"></i></button>
+								<span class="tooltiptext">Ver información del vendedor</span>
+						</td>
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-vehiculo').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del vehículo</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 14,000 UDS 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="imgVehiculos/7.jpg">
+				</div>
+				<div class="c">
+					<table>
+						<td class="tooltip">							
+								<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+								<i class="fa fa-mobile fa-1x" aria-hidden="true"></i></button>
+								<span class="tooltiptext">Ver información del vendedor</span>
+						</td>
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-vehiculo').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del vehículo</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 14,000 UDS 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="imgVehiculos/8.jpg" >
+				</div>
+				<div class="c">
+					<table>
+						<td class="tooltip">							
+								<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+								<i class="fa fa-mobile fa-1x" aria-hidden="true"></i></button>
+								<span class="tooltiptext">Ver información del vendedor</span>
+						</td>
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-vehiculo').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del vehículo</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 14,000 UDS 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="imgVehiculos/9.jpg">
+				</div>
+				<div class="c">
+					<table>
+						<td class="tooltip">							
+								<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+								<i class="fa fa-mobile fa-1x" aria-hidden="true"></i></button>
+								<span class="tooltiptext">Ver información del vendedor</span>
+						</td>
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-vehiculo').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del vehículo</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 14,000 UDS 
+				</div> 
+				<div class="b">
+					<img class = "imagenes" src="fondo1.jpg">
+				</div>
+				<div class="c">
+					<table>
+						<td class="tooltip">							
+								<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+								<i class="fa fa-mobile fa-1x" aria-hidden="true"></i></button>
+								<span class="tooltiptext">Ver información del vendedor</span>
+						</td>
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-vehiculo').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del vehículo</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 14,000 UDS 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes"src="fondo1.jpg" >
+				</div>
+				<div class="c">
+					<table>
+						<td class="tooltip">							
+								<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+								<i class="fa fa-mobile fa-1x" aria-hidden="true"></i></button>
+								<span class="tooltiptext">Ver información del vendedor</span>
+						</td>
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-vehiculo').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del vehículo</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 14,000 UDS 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="fondo1.jpg" >
+				</div>
+				<div class="c">
+					<table>
+						<td class="tooltip">							
+								<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+								<i class="fa fa-mobile fa-1x" aria-hidden="true"></i></button>
+								<span class="tooltiptext">Ver información del vendedor</span>
+						</td>
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-vehiculo').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del vehículo</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+								
+		</div>
+		<table>
+			<tr>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-fast-backward" aria-hidden="true"></i></button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-backward fa-1x" aria-hidden="true"></i></button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">1</button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-forward" aria-hidden="true"></i></button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-fast-forward" aria-hidden="true"></i></button>
+				</td>
+			</tr>
+		</table>	
+		</content>		
+		<nav class="navbar">
+			<ul>		
+					<li><a href = "" target="_self"><i class="fa fa-user-o fa-2x" aria-hidden="true"></i> Login </a>
+					<ul>
+						<li><a href = "usuario.html" target="_self">Ver Perfil</a></li>												
+						<li><a href = "#.html" target="_self">Cerrar Sesión</a></li>				
+					</ul>
+				<li><a href = "contactenos.html" target="_self"> <i class="fa fa-mobile fa-2x" aria-hidden="true"></i> Contáctenos </a></li>
+				<li><a href = "#"> <i class="fa fa-wrench fa-2x" aria-hidden="true"></i> Accesorios </a>
+					<ul>
+						<li><a href = "promoAcces.html" target="_self">Promocionar Accesorios</a></li>						
+						<li><a href = "compraAcces.html" target="_self">Comprar Accesorios</a></li>				
+					</ul>
+				</li>
+				<li><a href = "#"> <i class="fa fa-car fa-2x" aria-hidden="true"></i> Vehículos</a>
+					<ul>
+						<li><a href = "venderVeh.html" target="_self"> Vender Vehículo </a></li>						
+						<li><a href = "comprarVeh.html" target="_self">Comprar Vehículo</a></li>				
+					</ul>
+				</li>					
+				<li><a href = "home.html" target="_self"> <i class="fa fa-home fa-2x" aria-hidden="true"></i> Inicio </a></li>
+			</ul>
+		</nav>
+		<footer id="pie">
+			Derechos Reservados &copy; 2018
+      </footer>
+</body>
+  
+  
+  

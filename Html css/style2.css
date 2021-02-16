@@ -1,0 +1,318 @@
+
+.contactenos
+{
+   float:left;   	
+   display:grid;   
+   width: 27%; 
+   height: 100%;    
+   border: 1px solid #999999; 
+   background: #FFFFFF;   
+   padding:2%;
+   margin-left:2%;
+   margin-top:2%;	
+}
+.imagenes
+{
+	 width:230px ;
+	 height:150px;	 
+}
+.imagen
+{
+	width: 100%; 
+	height: 100%;
+	position:relative;
+}
+.label
+{
+	margin-left: auto;
+	margin-right: auto;
+	font-family:Verdana;
+	font-size:14px;  
+	font-weight: bold;
+}
+table
+{ 
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.grid 
+{
+   float:left;   
+   display:grid;   
+   width: 230px; 
+   height: 230px;    
+   border: 1px solid #999999; 
+   background: #FFFFFF;   
+   padding:1%;
+   margin-left:4%;
+   margin-top:2%;
+   
+}
+
+.botones 
+{
+	float:right;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	border-radius: 10px/10px;
+}
+
+body 
+{
+	background-image:url('fondo1.jpg');
+	background-size:no-repeat;
+	font-family:Verdana;
+	font-size:14px;
+	margin:0;
+	line-height:24px;	
+	padding: 20px;
+}
+
+header
+{
+  background: #FFFFFF;
+  border: 1px solid #999999;
+  padding: 20px;
+  border-radius: 20px/10px;
+  margin: 5px auto;
+}
+
+aside
+{
+  float: left;  
+  width: 25%;
+  height: 50%;
+  background: #FFFFFF;
+  border: 1px solid #999999;
+  border-radius: 10px/10px;  
+  text-align: left;
+  opacity:0.95;  
+  margin-top:10%;     
+  position:relative; 
+  
+}
+.content_venta
+{
+  float: right;
+  width: 67%;
+  height: 100%;  
+  border: 1px solid #999999;
+  border-radius: 10px/10px;
+  text-align: left;
+  opacity:0.95;  
+  position:relative;
+  margin-right:4%;
+  margin-top:10%;
+  background:#142b47;
+  
+  
+}
+.content_contact
+{
+  float: right;
+  width: 99%;
+  height: 70%;  
+  border: 1px solid #999999;
+  border-radius: 10px/10px;
+  text-align: left;
+  opacity:0.95;
+  margin: 100px auto;   
+  background:#142b47;
+}
+.content_login
+{
+  float: right;
+  width: 99%;
+  height: 70%;  
+  border: 1px solid #999999;
+  border-radius: 10px/10px;
+  text-align: left;
+  opacity:0.95;
+  margin: 100px auto;   
+  background:#142b47;
+}
+
+
+.content_home
+{
+  float: right;
+  width: 70%;
+  height: 50%;
+  background:#142b47;
+  border: 1px solid #999999;
+  border-radius: 10px/10px;  
+  text-align: left;
+  opacity:0.95;
+  margin: 100px auto;    
+  margin-right:15%;
+  margin-top:20%;  
+  position:relative; 
+}
+
+
+content
+{
+  float: right;
+  width: 74%;
+  height: 50%;
+  background: #FFFFFF;
+  border: 1px solid #999999;
+  border-radius: 10px/10px;
+  text-align: left;
+  opacity:0.95;
+  margin: 100px auto;  
+  margin-right:10%;
+  margin-top:10%;  
+  position:relative; 
+}
+
+.navbar
+{
+	float: right;		
+	width: 98%;
+	background:#142b47;
+	opacity:0.9;	
+	border: 1px solid #999999;
+	border-radius: 10px/10px;
+	margin: 0 auto;
+	text-align:left;	
+	z-index: 1;
+	position: absolute;	
+
+}
+.navbar ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+	position:relative;
+}
+.navbar ul li a
+{
+	display:block;
+	padding:20px;
+	color:white;
+	text-decoration: none;
+	width:140px;
+}
+.navbar ul:after
+{
+	content:""; clear:both;
+	display:block;	
+}
+.navbar ul li
+{
+	float:right;
+	listy-style:none;	
+}
+.navbar ul ul 
+{
+	display:none;
+}
+.navbar ul li:hover > ul
+{
+	display:block;
+}
+.navbar ul li:hover
+{
+	background:black;
+	transition:0.9s;
+}
+.navbar ul li:hover a
+{
+	color:white;
+}
+.navbar ul ul
+{
+	background:black;
+	padding:0;
+	margin:0;
+	position:absolute;top:100%;
+	
+    z-index: -1;
+	
+} 
+.navbar ul ul li
+{
+	float: none;
+	position:relative;	
+}
+.navbar ul ul li a
+{
+	padding:25px;
+	color: white;
+	width:180px;
+	text-align:left;
+	
+}
+.navbar ul ul li a:hover
+{
+	background:lightblue;
+	color:black;
+	transition:0.9;
+}
+
+.acordeon__item > input /*CSS para que no sea vea el radiobutton del arcordion*/
+{
+	display:none;
+}
+.acordeon__titulo
+{
+	display:block;
+	padding:15px; 
+	background:#142b47; /*Color del fondo*/
+	color: #fff; /*Color de la letra*/
+	font-size:16px;
+	cursor: pointer; /*Cambiar el icono del curson*/	
+	border-radius: 10px/10px;
+}
+.acordeon__titulo: hover
+{
+	backgound:#142b47;
+	opacity:0.9;
+}
+.acordeon__contenido
+{	
+	height:0;	
+	margin:2px;	
+	transition:0.9;
+	border: 1px solid #999999;
+	border-radius: 10px/10px;		
+	overflow: auto;	
+}
+.acordeon input:checked ~ .acordeon__contenido
+{
+	height:auto;	
+	margin:15px auto;	
+}
+.acordeon__contenido*
+{		
+	display:block  !important;	
+}
+
+footer
+{
+  float: right;
+  width: 95%;
+  height: 15%;
+  background:#142b47;
+  opacity:0.9;
+  color:white;
+  border: 1px solid #999999;
+  border-radius: 20px/10px;
+  margin: 5px auto;
+  text-align:center;
+  margin-right:2.5%;
+  margin-top:0%;
+  position: auto;
+  position:relative; 
+}
+

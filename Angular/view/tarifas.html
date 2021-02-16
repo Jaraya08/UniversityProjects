@@ -1,0 +1,55 @@
+<h3><i class="fa fa-user"></i> {{clientes.Nombre | uppercase}}</h3>
+<hr>
+<div class="col-sm-4">
+	<h4 class="text-center"></i>Tarifas personalizadas de cliente</h1>
+		<hr>
+		<form 
+			ng-submit="guardarServicio()" 
+			novalidate="novalidate">									
+			<p 
+				class="text-success animated fadeIn fast" 
+				class="col-sm-2"
+				ng-show="mensajeServicioFlag">Mensaje: {{ mensajeServicio }}
+			</p>			
+			<div class="form-group" ng-show="actualizado">						
+				Nombre del servicio:
+				<select 
+					class="form-control" 					
+					ng-model="servicio.IdServicio" 
+					required="required"
+					ng-disabled="true"
+					ng-options="servicios.IdServicio as servicios.NombreServicio for servicios in serviciosFG">	
+				    <option value=""></option>
+				</select>
+			</div>
+			<div class="form-group" ng-show="creando">						
+				Nombre del servicio:
+				<select 
+					class="form-control" 					
+					ng-model="servicio.IdServicio" 
+					required="required"
+					ng-options="servicios.IdServicio as servicios.NombreServicio for servicios in serviciosFG | orderBy:'NombreServicio'"										
+					>	
+				    <option value="{{servicio.IdServicio}}">{{servicio.NombreServicio}}</option>
+				</select>
+				
+			</div>
+			<div class="form-group">	
+				Precio de servicio: {{ servicio.Monto  | currency:'₡'}}
+				<input 						
+			 		ng-pattern="/^[0-9]+(\.[0-9]{1,3})?$/"
+					class="form-control" 
+					ng-model="servicio.Monto" 						
+					min="0" 
+					max="99999999" 						
+					required="required" 
+					placeholder="Precio de servicio"
+				> 
+			</div>			
+			<button type="button" class="btn btn-primary" ng-click="volver()"><i class="fas fa-arrow-left"></i> Volver </button>
+			<button  type="submit" class="btn btn-primary"><i class="fa fa-save "></i> Guardar cambios</button>
+			<br>				
+		</form>
+		<br>
+	</div>
+	

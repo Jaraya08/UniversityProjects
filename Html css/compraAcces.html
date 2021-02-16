@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>    
+	<meta charset="UTF-8">
+    <meta name="description" content="Sitio de venta de autos">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">    
+	<title>CR AUTOS 2.0</title>
+    <link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href="tooltip.css">	
+	<link rel="stylesheet" href="modal.css">	
+	<link rel="stylesheet" href="script.js">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">	
+ </head>
+	<body>
+		<!--Ventana Modal que muestra la informacion del venderdor-->
+		<div id="modal-user" class="modal">  
+			<form class="modal-content-acces animate" >        
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('modal-user').style.display='none'" class="close" title="Close PopUp">&times;</span>					
+				</div>
+				<div class="container">
+				  <table style="text-align:left">
+				   <tr><td><i class="fa fa-address-card fa-4x" aria-hidden="true"></i></td></tr>				 
+				   <tr>
+						<td width=25% style="font-weight: bold">Nombre:</td>
+						<td width=80%>Jordan Araya Leiva</td>
+					</tr>
+					<tr>
+						<td width=25% style="font-weight: bold">Teléfono:</td>
+						<td width=80%>86223950</td>
+					</tr>					
+					<tr>
+						<td width=25% style="font-weight: bold">Correo Electronico:</td>
+						<td width=80%>jordan.kn08@gmail.com</td>
+					</tr>					
+					<tr>
+						<td width=25% style="font-weight: bold">Facebook:</td>
+						<td width=80%>Facebook</td>
+					</tr>										
+					<tr>
+						<td width=25% style="font-weight: bold">Instagram:</td>
+						<td width=80% >Instagram</td>
+					</tr>
+					<tr><td width=25% style="font-weight: bold">Ubicación</td>
+						<td width=80%>
+							<div 
+								<td>
+									<img class = "imagenes" src="map.jpg">
+								</td>							
+						</td>
+					</tr>					
+				  </table>				  
+				</div>
+			</form>  
+		</div>		
+		<!--<header>
+			Encabezado-
+		</header>-->
+		<aside>
+		<div class="acordeon">				
+		  	<div class="acordeon__item">
+					<input type="checkbox" name="acordeon" id="filtro1">
+					<label for="filtro1" class="acordeon__titulo">
+					<i class="fa fa-filter fa-2x" aria-hidden="true"></i>Filtros</label>
+					<div class="acordeon__contenido"> 
+						<table width=100% >	
+							<tr>
+								<td >Nombre Producto</td>													
+								<td ><input type="text"  size=14% maxlength="20" value="Cualquiera"></td>																								
+							</tr>						
+							<tr>	
+									<td>Monto Mínimo</td>
+									<td><input type="number" min="1000" max="1000000"value="1000"></td>									
+							</tr>
+							<tr>
+									<td>Monto Máximo</td>
+									<td><input type="number" min="1000" max="1000000" value="30000"></td>
+							</tr>													
+						</table>
+					</div>			
+				</div>
+			</div>	
+		<button class ="botones" type="button" float="right" onclick="#funcion">
+			<i class="fa fa-filter fa-1x" aria-hidden="true"></i> Filtrar Producto</button>
+		</aside>
+		
+		<content class="content_venta" border =1 width =100%>						
+
+		<table>
+			<tr>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-fast-backward" aria-hidden="true"></i></button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-backward fa-1x" aria-hidden="true"></i></button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">1</button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-forward" aria-hidden="true"></i></button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-fast-forward" aria-hidden="true"></i></button>
+				</td>
+			</tr>
+		</table>
+		
+		
+		<div id="groupgrid">
+						
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 6,000 CRC 
+				</div> 
+				<div class="imagen">
+					<img  class = "imagenes" src="repVehiculos/1.jpg">
+				</div>
+				<div class="c">
+					<table>						
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del producto</span>							
+						</td>
+					</table>
+				</div>		
+			</div>	
+				<div class="grid"> 
+				<div class="label">				
+					 Valor: 6,000 CRC 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="repVehiculos/2.jpg">
+				</div>
+				<div class="c">
+					<table>						
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del producto</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 6,000 CRC 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="repVehiculos/3.jpg">
+				</div>
+				<div class="c">
+					<table>						
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del producto</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 6,000 CRC 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="repVehiculos/4.jpg">
+				</div>
+				<div class="c">
+					<table>						
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del producto</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+			<div class="grid"> 
+				<div class="label">				
+					 Valor: 6,000 CRC 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="repVehiculos/5.jpg" >
+				</div>
+				<div class="c">
+					<table>						
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del producto</span>							
+						</td>
+					</table>
+				</div>		
+			</div>
+		<div class="grid"> 
+				<div class="label">				
+					 Valor: 6,000 CRC 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="repVehiculos/6.jpg" >
+				</div>
+				<div class="c">
+					<table>						
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del producto</span>							
+						</td>
+					</table>
+				</div>		
+			</div>			
+		</div>
+		<div class="grid"> 
+				<div class="label">				
+					 Valor: 6,000 CRC 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="repVehiculos/7.jpg">
+				</div>
+				<div class="c">
+					<table>						
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del producto</span>							
+						</td>
+					</table>
+				</div>		
+			</div>			
+		</div>
+		<div class="grid"> 
+				<div class="label">				
+					 Valor: 6,000 CRC 
+				</div> 
+				<div class="imagen">
+					<img class = "imagenes" src="repVehiculos/8.jpg">
+				</div>
+				<div class="c">
+					<table>						
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del producto</span>							
+						</td>
+					</table>
+				</div>		
+			</div>			
+		</div>
+		<div class="grid"> 
+				<div class="label">				
+					 Valor: 6,000 CRC 
+				</div> 
+				<div class="imagen">
+					<img  class = "imagenes"src="repVehiculos/9.jpg">
+				</div>
+				<div class="c">
+					<table>						
+						<td class="tooltip">
+							<button onclick="document.getElementById('modal-user').style.display='block'" class ="botones" float="right" >
+							<i class="fa fa-info" aria-hidden="true"></i></i></button>
+							<span class="tooltiptext">ver información del producto</span>							
+						</td>
+					</table>
+				</div>		
+			</div>			
+		</div>
+		<table>
+			<tr>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-fast-backward" aria-hidden="true"></i></button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-backward fa-1x" aria-hidden="true"></i></button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">1</button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-forward" aria-hidden="true"></i></button>
+				</td>
+				<td>
+					<button class ="botones" type="button" float="right" onclick="#funcion">
+					<i class="fa fa-fast-forward" aria-hidden="true"></i></button>
+				</td>
+			</tr>
+		</table>		
+		</content>		
+		<nav class="navbar">
+			<ul>
+				<li><a href = "" target="_self"><i class="fa fa-user-o fa-2x" aria-hidden="true"></i> Login </a>
+					<ul>
+						<li><a href = "usuario.html" target="_self">Ver Perfil</a></li>												
+						<li><a href = "#.html" target="_self">Cerrar Sesión</a></li>				
+					</ul>
+				<li><a href = "contactenos.html" target="_self"> <i class="fa fa-mobile fa-2x" aria-hidden="true"></i> Contáctenos </a></li>
+				<li><a href = "#"> <i class="fa fa-wrench fa-2x" aria-hidden="true"></i> Accesorios </a>
+					<ul>
+						<li><a href = "promoAcces.html" target="_self">Promocionar Accesorios</a></li>						
+						<li><a href = "compraAcces.html" target="_self">Comprar Accesorios</a></li>				
+					</ul>
+				</li>
+				<li><a href = "#"> <i class="fa fa-car fa-2x" aria-hidden="true"></i> Vehículos</a>
+					<ul>
+						<li><a href = "venderVeh.html" target="_self"> Vender Vehículo </a></li>						
+						<li><a href = "comprarVeh.html" target="_self">Comprar Vehículo</a></li>				
+					</ul>
+				</li>					
+				<li><a href = "home.html" target="_self"> <i class="fa fa-home fa-2x" aria-hidden="true"></i> Inicio </a></li>
+			</ul>
+		</nav>
+		<footer id="pie">
+			Derechos Reservados &copy; 2018
+      </footer>
+</body>
+  
+  
+  

@@ -1,0 +1,49 @@
+<!-- div class="panel panel-default">
+	<div class="panel-heading">
+		<h4><i class="fas fa-motorcycle"></i> SERVICIOS FG</h4>
+
+	</div> -->
+<div class="panel-body" style="background: #FFFFFF;font-family:sans-serif;">
+	<div class="col-sm-12">
+		<div class="row">
+			<h3><i class="fas fa-motorcycle fa-lg"></i> Servicios</h3>
+			<hr>
+			<div class="row">
+				<div class="col-sm-8">
+					<div>
+						<input class="form-control" type="text" ng-model="search" placeholder="Buscar"
+							aria-label="Search">
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<a style="background: #414141" href="#servicio/nuevo" class="btn btn-primary btn-block"><i
+							class="fas fa-motorcycle fa-lg">
+						</i> Nuevo servicio </a>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-sm-12">
+					<table class="table table-bordered table-striped">
+						<tr>
+							<th>Descripción del tramite</th>
+							<th class="text-center">Ver detalle</th>
+							<th class="text-center">Eliminar</th>
+						</tr>
+						<tr ng-repeat="servicio in servicios | filter:search | limitTo:posicion | limitTo:-7  ">
+							<td style="display: none;">{{servicio.IdServicio}}</td>
+							<td>{{servicio.NombreServicio}}</td>
+							<td class="text-center"><a href="#/servicio/{{servicio.IdServicio}}">
+									<i class="fas fa-info-circle " style="color:#414141;"></i></a></td>
+							<td class="text-center"><a href="#">
+									<i class="fas fa-trash-alt" style="color:#414141;"></i></a></td>
+						</tr>
+					</table>
+					<button style="background: #414141" class="btn btn-primary" ng-click="Anterior()">
+						<i class="fa fa-chevron-left fa-lg"></i> Anterior</button>
+					<button style="background: #414141" class="btn btn-primary" ng-click="Siguiente()">
+						Siguiente <i class="fa fa-chevron-right fa-lg"></i></button>
+				</div>
+				<hr>				
+			</div>
+		</div>

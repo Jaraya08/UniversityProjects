@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             x:Class="Despacha.NoDespachados">
+    
+    <ContentPage.Content>
+
+        <StackLayout
+            Margin="20">
+
+
+
+            <Label x:Name="lblTitulo"
+                Text="Por despachar" 
+                FontSize="20"
+                FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand"/>
+            
+            <ListView x:Name="lvw_NoDespachados"                      
+                      HorizontalOptions="CenterAndExpand" 
+                      RefreshControlColor="Aqua"
+                      HasUnevenRows = "true"
+                      RowHeight = "100"
+                      ItemSelected="lvw_NoDespachados_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout  
+                                Orientation="Vertical">
+                                <StackLayout 
+                                    Orientation="Horizontal">
+                                    <Label 
+                                        Text="{Binding Contenedor}"
+                                        FontAttributes="Bold"
+                                        FontSize="30"
+                                        HorizontalOptions="Start"/>
+                                    <Label 
+                                        Text="{Binding Tamanho}"
+                                        FontSize="30"
+                                        FontAttributes="Bold"
+                                        HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <SearchBar 
+                x:Name="CountriesSearchBar"  
+                Placeholder="Buscar" 
+                Keyboard="Numeric" 
+                HorizontalOptions="StartAndExpand" 
+                TextChanged="CountriesSearchBar_TextChanged" />
+
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vehiculos>
+  <Tipo Descripcion="Personal" Tipo="Sedan" Tarifa="2500">
+    <Vehiculo>
+      <Placa>JHL808</Placa>
+      <Marca>Nissan</Marca>
+      <Modelo>March</Modelo>
+      <Anno>2015</Anno>
+      <Tipo>Sedan</Tipo>
+      <Estado>Alquilado</Estado>
+      <Horas>3</Horas>
+    </Vehiculo>
+  </Tipo>
+  <Tipo Descripcion="4x4" Tipo="pick up" Tarifa="3000">
+    <Vehiculo>
+      <Placa>124365</Placa>
+      <Marca>Toyota</Marca>
+      <Modelo>Land Cruiser</Modelo>
+      <Anno>2015</Anno>
+      <Tipo>pick up</Tipo>
+      <Estado>Disponible</Estado>
+      <Horas>0</Horas>
+    </Vehiculo>
+  </Tipo>
+</vehiculos>
